@@ -1,6 +1,6 @@
 :root {
-    --red: #CD5C5C;
-    --light-red: #fff5f5;
+    --red: #8B1E3F;
+    --light-red: #FDECEC;
 }
 
 * {
@@ -12,7 +12,6 @@
 
 body {
     background-color: white;
-    color: black;
     padding: 20px;
     text-align: center;
 }
@@ -47,7 +46,7 @@ h2 {
 nav {
     
     margin-bottom: 30px;
-    background-color: var(--red);
+    background-color: #7A1C36;
     padding: 10px;
     border-radius: 8px;
 }
@@ -61,6 +60,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+    color: #FFDADA;
 }
 
 section {
@@ -89,6 +89,7 @@ section a {
 
 section a:hover {
     text-decoration: underline;
+    color: black;
 }
 
 p, a {
@@ -130,7 +131,6 @@ p, a {
 
 .next-card p {
     color: var(--red);
-
     text-align: center;
 }
 
@@ -144,6 +144,7 @@ p, a {
 
 .next-link:hover {
     text-decoration: underline;
+    color: black;
 }
 
 
