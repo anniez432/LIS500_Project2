@@ -187,7 +187,7 @@ p, a {
     color: black;
 }
 
-
+/* Changes to about us page styling */
 .about-person {
     overflow: hidden;
 }
@@ -198,4 +198,65 @@ p, a {
     flex-shrink: 0;
     margin: 10px 15px;
     border-radius: 8px;
+}
+
+
+/* Tech-hero page specific styling*/
+.tech-hero-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-hero {
+    border: 1px solid var(--red);
+    border-radius: 8px;
+    background-color: var(--light-red);
+    text-align: left;
+    padding: 0 30px 0 30px;
+}
+
+.tech-hero-top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.hero-img {
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+
+.tech-hero-header {
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: underline;
+    color: var(--red);
+}
+
+.tech-hero-description {
+    margin-top: 20px;
+}
+
+.tech-hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tech-hero-button {
+    display: inline-block;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    background-color: var(--red);
+    color: var(--light-red);
+    padding: 10px;
+}
+
+.tech-hero-button:hover {
+    text-decoration: underline;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
