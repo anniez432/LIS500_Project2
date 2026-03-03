@@ -198,6 +198,24 @@ p, a {
     border-radius: 8px;
 }
 
+.about-button {
+    display: inline-block;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    background-color: var(--red);
+    color: var(--light-red);
+    padding: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.about-button:hover {
+    text-decoration: underline;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
 
 /* Tech-hero page specific styling*/
 .tech-hero-container {
