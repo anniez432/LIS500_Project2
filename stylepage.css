@@ -188,17 +188,14 @@ p, a {
 }
 
 
-/* design update for about page */
 .about-person {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+    overflow: hidden;
 }
 
-.about-description {
-    max-width: 600px;
-}
 
-#about-us-img {
+#about-us-img { 
+    float: left;
+    flex-shrink: 0;
+    margin: 10px 15px;
     border-radius: 8px;
 }
