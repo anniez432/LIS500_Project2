@@ -60,12 +60,15 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: #FFDADA;
+    color: #E8EEF5;
+    background-color: #3D5A80;
+    border-radius: 8px;
+    padding: 5px 10px;
 }
 
 section {
-    margin: 30px auto;
-    padding: 15px;
+    margin: 15px auto;
+    padding: 10px;
     border: 1px solid var(--red);
     border-radius: 8px;
     background-color: var(--light-red);
@@ -103,8 +106,17 @@ p, a {
 .next-container {
     background-color: white;
     border: none;
-    padding: 40px 20px;
-    margin-bottom: 40px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    display: flex;          /* add this */
+    flex-direction: row;    /* add this */
+    gap: 1rem;              /* add this */
+    align-items: stretch;   /* equal height cards */
+    width: 100%;           /* add this to make it full width */
+    max-width: 1200px;       /* add this to keep it from sprawling */
+    margin-left: auto;      /* center it */
+    margin-right: auto;
+    
 }
 
 .next-container h2 {
@@ -117,9 +129,13 @@ p, a {
     background-color: var(--light-red);
     border: 2px solid var(--red);
     border-radius: 12px;
-    padding: 30px;
-    margin-bottom: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 16px;          /* was 30px */
+    flex:0 1 360px;                /* add this so cards share width equally */
+    display: flex;          /* add these three to pin "More ->" to bottom */
+    flex-direction: column;
+    max-width: 600px;  /* This holds the width of the text in the boxes use 280p or whatever feels right */
+    justify-content: space-between;
+    overflow: hidden;
 }
 
 .next-card h3 {
@@ -128,6 +144,25 @@ p, a {
     margin-bottom: 12px;
     margin-top: 0;
 }
+.next-image {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: -16px;
+    gap: 0px;
+    border-radius: 8px;
+}
+.next-image img {
+    width: 80%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0%;
+    max-width: none;
+
+
+}
 
 .next-card p {
     color: var(--red);
@@ -135,11 +170,16 @@ p, a {
 }
 
 .next-link {
-    display: inline-block;
-    color: var(--red);
+    display: block;
+    padding: 10px 20px;
+    background-color: #E8EEF5;
+    text-align: center;
+    color: #3D5A80;
     text-decoration: none;
     font-weight: bold;
     margin-top: 10px;
+    border-radius: 30px;
+    border: 2px solid #3D5A80;
 }
 
 .next-link:hover {
