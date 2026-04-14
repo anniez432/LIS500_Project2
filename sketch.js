@@ -42,13 +42,14 @@ function draw() {
   text(label, width / 2, height - 16);
 
   // Pick an emoji, the "default" is fork
-  let emoji = "𐂐";
+  let emoji = "blank";
   if (label == "Spoon") {
-    emoji = "🥄";
+    emoji = "SPOON!";
   } else if (label == "Knife") {
-    emoji = "🔪";
+    emoji = "KNIFE!";
+  } else if (label == "Fork") {
+    emoji = "FORK!";
   }
-
   // Draw the emoji
   textSize(256);
   text(emoji, width / 2, height / 2);
