@@ -319,3 +319,9 @@ p, a {
     color: white;
     text-shadow: black 0.1em 0.1em 0.2em;
 }
+
+#canvasContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}

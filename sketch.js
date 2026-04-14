@@ -16,7 +16,8 @@ function preload() {
 
 
 function setup() {
-  createCanvas(640, 520);
+  let canvas = createCanvas(640, 520);
+  canvas.parent('canvasContainer');
   // Create the video
   video = createCapture(VIDEO);
   video.hide();
