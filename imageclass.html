@@ -36,19 +36,89 @@
 
     <section class="resource-section">
         <h3 class="section-heading">Project Scope</h3>
-        <p>
+        <p>The main objective of our project was to create an image classification model that can accurately identify whether 
+            an object is a fork, spoon, or knife. We intentionally chose a small and familiar set of objects to focus on the 
+            process of building and training a model rather than getting overwhelmed by the complexity of an object. At the 
+            same time, forks, spoons, and knives share similar physical characteristics: metallic surfaces, elongated shapes, 
+            and reflective materials. This does create potential confusion for a machine learning model to distinguish each 
+            utensil.</p>
+            
+          <p>  Our scope included three categories:</p>
+
+
+            Fork, 
+
+            Spoon, and 
+
+            Knife
+
+
+         <p>   Each group member contributed approximately 30–40 images per utensil. 
+            All images were original and taken by us, as required. We made an effort to include 
+            variation in material: metal, plastic, size, color, and design. Some utensils had unique shapes or colors, 
+            while others were more standard.
+
         </p>
     </section>
 
     <section class="resource-section">
         <h3 class="section-heading">Process</h3>
-        <p>
+        <p>To begin 30-40 samples were taken of each utensil by each group member. This would equate to around 100 samples per 
+            utensil before training out model in Teachable Machine. Each group member utilized a different set of utensils, 
+            with different material, color, and shape to help with training our model to differentiate utensils of various 
+        materials and likeness. </p>
+
+        <p>Our model has a bias towards forks when the model demonstrates a blank space. In order to fix this we added a “blank” 
+            class in Teachable Machine to allow the model to detect if there is not a utensil present. Various blank backgrounds 
+            were utilized to help to allow the machine so that a nonstandard background would not be mistaken for a utensil. </p>
+
+        <p>The model also had trouble classifying without a basic blank background so samples were taken with different 
+            backgrounds. This proved to help with classifying the objects even with a messier background. </p>
+
+        <p>We also noticed that when there was lots of reflection on the utensils the glare would cause error for the model. 
+            Some samples were taken by a window with more glare which proved to be helpful with this issue. </p>
+
+        <p>Our model works well in well lit conditions with less messy backgrounds but has the most issue differentiating 
+            in areas with lots of objects in the background. The model also wants to classify the face. 
+            Therefore for the model to work the user must keep the face out of the camera. 
+
         </p>
     </section>
 
     <section class="resource-section">
         <h3 class="section-heading">Reflection</h3>
-        <p>
+        <p>This project has forced the team to think more critically about ideas that were presented in ‘Unmasking AI’. 
+            Buolamwini highlights how bias embedded in the ways we train machines may lead to unequal outcomes, 
+            particularly for marginalized groups. For this project Buolamwini reminds us that diversification of data is not an 
+            option but is necessary for the success of a classification algorithm. Therefore, while completing the project the 
+            team was thinking about how we can add diversity in our samples even if it is just with 3 commonly used eating 
+            utensils. </p>
+
+        <p>Diversity in our dataset was created as a model of limited data, and will work only in limited conditions. 
+        Samples were therefore taken with different backgrounds, utensils were used which have different likeness and/or material. 
+        This is important as people may have utensils in their own homes which may be made from different materials, 
+        for example metal instead of plastic. Pictures of the utensils were also taken at different angles, 
+        this helped to maintain a working model as the utensils were placed in different positions. 
+        As we added data from each member we began to see that as the dataset grew the accuracy of the model grew with it too. 
+        This shows the issue that arises with small datasets. So as we grow the diversity in our dataset the amount of samples 
+        we collect also must grow with it. </p>
+
+        <p>For example, when we started to add samples with different backgrounds the model improved accuracy even with simple 
+            backgrounds, but more importantly improved accuracy with various environmental conditions. When we added samples 
+            with various lighting conditions, and samples that had some glare, this improved accuracy in those conditions, 
+            but also in the model overall. </p>
+
+        <p>In order to accomplish the most accurate results, we could not assume that the model would work in all conditions 
+            if samples were only taken with a plain background with the same lighting conditions. 
+            The model had to be trained in a variety of conditions to work in a variety of conditions. 
+            This is similar to how in ‘Unmasking AI’ the assumption was made that if the face recognition models worked for 
+            those with fair skin it would work with those with darker skin. Right? NO. If the model is not trained to recognize 
+            diversity. The model will not recognize diversity. </p>
+
+        <p>Thus if given the opportunity to improve our model. Time would be taken to collect samples in a variety of environments 
+            and backgrounds that would look different than that of a college student. Different materials 
+            for the utensils would be used as well. Therefore although the model currently works within our own environments, 
+            we could achieve accuracy in environments that are different from our own. 
         </p>
     </section>
     
