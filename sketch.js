@@ -7,8 +7,8 @@ let video;
 let label = "waiting...";
 // The classifier
 let classifier;
-//let modelURL = 'https://teachablemachine.withgoogle.com/models/Y1G9GqffG/';
-let modelURL = './model/';
+let modelURL = 'https://teachablemachine.withgoogle.com/models/Y1G9GqffG/';
+//let modelURL = './model/';
 
 // STEP 1: Load the model!
 function preload() {
@@ -51,7 +51,7 @@ function draw() {
   } else if (label == "Fork") {
     emoji = "FORK!";
   } else if (label == "Blank") {
-    emoji = "nothing here...";
+    emoji = "Blank";
   }
   // Draw the emoji
   textSize(256);
