@@ -70,10 +70,5 @@ function gotResults(error, results) {
   labelBar.html(label);
 
   classifyVideo();
-}
-  console.log("Label is:", results[0].label);
-  console.log("Confidence:", results[0].confidence);
-  // Store the label and classify again!
-  label = results[0].label;
-  classifyVideo();
+ 
 }
