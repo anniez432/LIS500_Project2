@@ -7,13 +7,13 @@ let video;
 let label = "waiting...";
 // The classifier
 let classifier;
-let modelURL = 'https://teachablemachine.withgoogle.com/models/Y1G9GqffG/';
+//let modelURL = 'https://teachablemachine.withgoogle.com/models/Y1G9GqffG/';
+let modelURL = './model/';
 
 // STEP 1: Load the model!
 function preload() {
-  classifier = ml5.imageClassifier(modelURL + 'model.json');
+  classifier = ml5.imageClassifier(modelURL, {version: 2});
 }
-
 
 function setup() {
   let canvas = createCanvas(640, 520);
@@ -50,6 +50,8 @@ function draw() {
     emoji = "KNIFE!";
   } else if (label == "Fork") {
     emoji = "FORK!";
+  } else if (label == "Blank") {
+    emoji = "nothing here...";
   }
   // Draw the emoji
   textSize(256);
@@ -63,6 +65,8 @@ function gotResults(error, results) {
     console.error(error);
     return;
   }
+  console.log("Label is:", results[0].label);  // change to this
+  console.log("Confidence:", results[0].confidence);
   // Store the label and classify again!
   label = results[0].label;
   classifyVideo();
