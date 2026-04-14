@@ -1,31 +1,48 @@
 // Teachable Machine
 // Utensils!
 
-// The video
 let video;
-// For displaying the label
-let label = "waiting...";
-// The classifier
+let label = "Welcome";
 let classifier;
-let modelURL = 'https://teachablemachine.withgoogle.com/models/Y1G9GqffG/';
-//let modelURL = './model/';
+let labelBar;
 
-// STEP 1: Load the model!
+let modelURL = "https://teachablemachine.withgoogle.com/models/Y1G9GqffG/";
+
+// STEP 1: Load the model
 function preload() {
-  classifier = ml5.imageClassifier(modelURL, {version: 2});
+  classifier = ml5.imageClassifier(modelURL, { version: 2 });
 }
 
 function setup() {
-  let canvas = createCanvas(640, 520);
-  canvas.parent('canvasContainer');
-  // Create the video
+  let canvas = createCanvas(640, 480);
+  canvas.parent("canvasContainer");
+
+  // webcam
   video = createCapture(VIDEO);
+  video.size(640, 480);
   video.hide();
-  // STEP 2: Start classifying
+
+  // styled label bar under the canvas
+  labelBar = createDiv(label);
+  labelBar.parent("canvasContainer");
+  labelBar.style("width", "640px");
+  labelBar.style("height", "70px");
+  labelBar.style("background", "#6e2438");
+  labelBar.style("color", "white");
+  labelBar.style("font-size", "34px");
+  labelBar.style("font-family", "Georgia, serif");
+  labelBar.style("font-weight", "bold");
+  labelBar.style("display", "flex");
+  labelBar.style("align-items", "center");
+  labelBar.style("justify-content", "center");
+  labelBar.style("margin", "0");
+  labelBar.style("padding", "0");
+
+  // Start classifying
   classifyVideo();
 }
 
-// STEP 2 classify the video!
+// STEP 2: Classify the video
 function classifyVideo() {
   classifier.classify(video, gotResults);
 }
@@ -33,26 +50,28 @@ function classifyVideo() {
 function draw() {
   background(0);
 
-  // Draw the video
-  image(video, 0, 0, width, height - 40);
+  // Show only the webcam image
+  image(video, 0, 0, width, height);
 
-  // STEP 4: Draw the label
-  textSize(32);
-  textAlign(CENTER, CENTER);
-  fill(255);
-  text(label, width / 2, height - 16);
-
-  // Pick an emoji, the "default" is fork
+  // No large text drawn on the canvas
 }
 
-// STEP 3: Get the classification!
+// STEP 3: Get classification results
 function gotResults(error, results) {
-  // Something went wrong!
   if (error) {
     console.error(error);
     return;
   }
-  console.log("Label is:", results[0].label);  // change to this
+
+  console.log("Label is:", results[0].label);
+  console.log("Confidence:", results[0].confidence);
+
+  label = results[0].label;
+  labelBar.html(label);
+
+  classifyVideo();
+}
+  console.log("Label is:", results[0].label);
   console.log("Confidence:", results[0].confidence);
   // Store the label and classify again!
   label = results[0].label;
