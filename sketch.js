@@ -14,7 +14,11 @@ function preload() {
 }
 
 function setup() {
-  let canvas = createCanvas(640, 480);
+  // let canvas stay in container 
+  let container = document.getElementById("canvasContainer");
+  let w = container.offsetWidth;
+  let h = w * 0.6;
+  let canvas = createCanvas(w, h);
   canvas.parent("canvasContainer");
 
   // webcam
@@ -38,8 +42,14 @@ function setup() {
   labelBar.style("margin", "0");
   labelBar.style("padding", "0");
 
+
   // Start classifying
   classifyVideo();
+}
+
+function windowResized() {
+    let container = document.getElementById('canvasContainer');
+    resizeCanvas(container.offsetWidth, container.offsetWidth * 0.75);
 }
 
 // STEP 2: Classify the video

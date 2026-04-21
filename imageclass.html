@@ -29,9 +29,34 @@
     <section class="resource-section">
         <h3 class="section-heading">Project Objective</h3>
         <p>Create an algorithm to classify images and export using an Application Programming Interface (API) using Google's Teachable
-        Machine. Reflecting on Buolawmini's book and this activity, we will produce a webpage that includes a project statement and
-        an imbedded video of our work.
+        Machine. Reflecting on Buolawmini's 'Unmasking AI' and this activity, we will produce a webpage that includes a project statement and
+        an imbedded demo of our work.
         </p>
+    </section>
+
+    <!--Use sketch.js's code too have demo-->
+    <section class="resource-section">
+        <h3 class="section-heading">Try our model!</h3>
+        <div id="canvasContainer"></div>
+        <!-- Add a section for tips about using the model -->
+        <p id="canvasContainerTips">
+            Tips: 
+            <ul>
+                <li>This model works best in well-lit conditions with less messy backgrounds</li>
+                <li>The model also tends to classify the face, so the user should keep their face out of the camera</li>
+                <li>There is a blank class in the model to mitigate bias and misclassification</li>
+            </ul> 
+        </p>
+    </section>
+
+    <section class="resource-section">
+        <h3 class="section-heading">Video</h3>
+        <div class="model-video" id="project-3">
+            <video controls width="600">
+                <source src="420Recording.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </section>
 
 
@@ -46,12 +71,12 @@
             
           <p>  Our scope included three categories:</p>
 
-
+            <p style="font-weight: bold">
             Fork, 
 
             Spoon, and 
 
-            Knife
+            Knife</p>
 
 
          <p>   Each group member contributed approximately 30–40 images per utensil. 
@@ -64,8 +89,10 @@
 
     <section class="resource-section">
         <h3 class="section-heading">Process</h3>
-        <p>To begin 30-40 samples were taken of each utensil by each group member. This would equate to around 100 samples per 
-            utensil before training out model in Teachable Machine. Each group member utilized a different set of utensils, 
+        <!--Add headers to break up statement more-->
+        <h5>Data Collection</h5>
+        <p>To begin, 30-40 samples were taken of each utensil by each group member. This would equate to around 100 samples per 
+            utensil before training our model in Teachable Machine. Each group member utilized a different set of utensils, 
             with different material, color, and shape to help with training our model to differentiate utensils of various 
         materials and likeness. </p>
 
@@ -73,6 +100,7 @@
             class in Teachable Machine to allow the model to detect if there is not a utensil present. Various blank backgrounds 
             were utilized to help to allow the machine so that a nonstandard background would not be mistaken for a utensil. </p>
 
+        <h5>Model Adjustments</h5>
         <p>The model also had trouble classifying without a basic blank background so samples were taken with different 
             backgrounds. This proved to help with classifying the objects even with a messier background. </p>
 
@@ -88,6 +116,7 @@
 
     <section class="resource-section">
         <h3 class="section-heading">Reflection</h3>
+        <h5>The Necessity of Diverse Data</h5>
         <p>This project has forced the team to think more critically about ideas that were presented in ‘Unmasking AI’. 
             Buolamwini highlights how bias embedded in the ways we train machines may lead to unequal outcomes, 
             particularly for marginalized groups. For this project Buolamwini reminds us that diversification of data is not an 
@@ -116,32 +145,16 @@
             those with fair skin it would work with those with darker skin. Right? NO. If the model is not trained to recognize 
             diversity. The model will not recognize diversity. </p>
 
-        <p>Thus if given the opportunity to improve our model. Time would be taken to collect samples in a variety of environments 
-            and backgrounds that would look different than that of a college student. Different materials 
-            for the utensils would be used as well. Therefore although the model currently works within our own environments, 
-            we could achieve accuracy in environments that are different from our own. 
+        <h5>Future Improvements</h5>
+        <p> As Bouolamwini recounted her experiences working to create a more diverse dataset, she noted the "power shadows of 
+            patriarchy and white supremacy" that lurks in the datasets (97). Thus, if given the opportunity to improve our model, 
+            time would be taken to collect samples in a variety of environments and backgrounds that would look different than 
+            that of a college student in our positions. Different materials for the utensils would be used as well. 
+            Therefore, although the model currently works within our own environments, we could achieve accuracy in environments 
+            and have more representation for those that have different lived experiences than our own.  
         </p>
     </section>
-    
 
-    <section class="resource-section">
-        <h3 class="section-heading">Video</h3>
-        <div class="model-video" id="project-3">
-            <video controls width="600">
-                <source src="project3_recording.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
-
-
-    <!--Use sketch.js's code too have demo-->
-    <section class="resource-section">
-        <h3 class="section-heading">Try our model!</h3>
-        <p>
-        </p>
-        <div id="canvasContainer"></div>
-    </section>
 
     <script src="sketch.js"></script>
 </body>

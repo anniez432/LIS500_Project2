@@ -322,6 +322,35 @@ p, a {
 
 #canvasContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-top: 1rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Make canvas fit in width of container */
+
+#canvasContainer canvas {
+    max-width: 90%;
+    height: auto;
+    display: block;
+}
+
+#canvasContainer label {
+    margin-top: 0.5rem;
+    text-align: center;
+    width: 100%;
+    color: var(--red);
+}
+
+#canvasContainerTips{
+    text-align: center;
+}
+
+h5{
+    color: var(--red);
+    margin-top: 20px;
+    
 }
