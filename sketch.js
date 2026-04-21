@@ -17,7 +17,7 @@ function setup() {
   // let canvas stay in container 
   let container = document.getElementById("canvasContainer");
   let w = container.offsetWidth;
-  let h = w * 0.6;
+  let h = w * 0.55;
   let canvas = createCanvas(w, h);
   canvas.parent("canvasContainer");
 

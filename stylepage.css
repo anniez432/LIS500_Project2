@@ -341,7 +341,8 @@ p, a {
 #canvasContainer label {
     margin-top: 0.5rem;
     text-align: center;
-    width: 100%;
+    width: 70%;
+    height: 30%;
     color: var(--red);
 }
 
@@ -352,5 +353,5 @@ p, a {
 h5{
     color: var(--red);
     margin-top: 20px;
-    
+
 }
